@@ -31,7 +31,7 @@ if not st.session_state["authenticated"]:
         if username.lower() == "ldp_team" and password == "LDP@123":
             st.session_state["authenticated"] = True
             st.success("✅ Login successful!")
-            st.experimental_rerun()
+            st.rerun()  # ✅ Correct method
         else:
             st.error("❌ Invalid username or password")
     st.stop()
