@@ -12,24 +12,29 @@ import heapq
 import time
 
 # ========== AUTH ========== #
-st.set_page_config(page_title="Student-Coach Matcher")
+import streamlit as st
+
+st.set_page_config(page_title="Student-Coach Matcher", page_icon="🔐")
 st.title("🔐 LDP Student-Coach Matcher")
 
-# Initialize session state
+# Session state for authentication
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
 
 if not st.session_state["authenticated"]:
-    username = st.text_input("Username")
-    password = st.text_input("Password", type="password")
+    with st.form("login_form", clear_on_submit=False):
+        username = st.text_input("Username")
+        password = st.text_input("Password", type="password")
+        submitted = st.form_submit_button("Login")
 
-    if st.button("Login"):
+    if submitted:
         if username.lower() == "ldp_team" and password == "LDP@123":
             st.session_state["authenticated"] = True
+            st.success("✅ Login successful!")
             st.experimental_rerun()
         else:
-            st.error("❌ Invalid credentials")
-    st.stop()  # Only stop if still not authenticated
+            st.error("❌ Invalid username or password")
+    st.stop()
 
 
 # ========== OPENAI KEY ========== #
