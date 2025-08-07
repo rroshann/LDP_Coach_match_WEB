@@ -96,8 +96,4 @@ This tool is intended for use by the LDP team and should not be shared publicly.
 
 ## 📧 Questions?
 
-Contact the project admin for issues, support, or feature enhancements.
-
-* Make this private with GitHub access controls
-
-I can generate the `requirements.txt` if you don’t already have it.
+Contact me via roshan.siddartha.24@gmail.com for issues, support or feature enhancements.
