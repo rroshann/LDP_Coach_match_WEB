@@ -1,5 +1,5 @@
 # 2. LOAD & PARSE INPUTS
-survey_df = pd.read_excel("class-students_2026.xlsx")
+survey_df = pd.read_excel("class-students.xlsx")
 
 # Extract resumes from PDF
 def extract_resumes(pdf_path):
@@ -22,7 +22,7 @@ def extract_resumes(pdf_path):
         resumes[current_id] = current_text.strip()
     return resumes
 
-resume_dict = extract_resumes("resumes-class_2026.pdf")
+resume_dict = extract_resumes("resumes-class.pdf")
 
 # Load coach data
 coaches_info = docx2txt.process("coaches-info.docx")
