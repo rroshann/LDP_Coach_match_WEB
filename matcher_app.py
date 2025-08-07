@@ -15,14 +15,22 @@ import time
 st.set_page_config(page_title="Student-Coach Matcher")
 st.title("🔐 LDP Student-Coach Matcher")
 
-if st.session_state.get("authenticated") != True:
+# Initialize session state
+if "authenticated" not in st.session_state:
+    st.session_state["authenticated"] = False
+
+if not st.session_state["authenticated"]:
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
-    if username.lower() == "ldp_team" and password == "LDP@123":
-        st.session_state["authenticated"] = True
-        st.experimental_rerun()
-    else:
-        st.stop()
+
+    if st.button("Login"):
+        if username.lower() == "ldp_team" and password == "LDP@123":
+            st.session_state["authenticated"] = True
+            st.experimental_rerun()
+        else:
+            st.error("❌ Invalid credentials")
+    st.stop()  # Only stop if still not authenticated
+
 
 # ========== OPENAI KEY ========== #
 st.header("Step 1: Enter OpenAI API Key")
