@@ -1,0 +1,7 @@
+streamlit
+openai
+pandas
+docx2txt
+PyPDF2
+scikit-learn
+tqdm
