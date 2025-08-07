@@ -1,8 +1,3 @@
-Here’s a clean and professional `README.md` file you can use for your repo that powers [https://ldpcoachmatch.streamlit.app/](https://ldpcoachmatch.streamlit.app/):
-
----
-
-```markdown
 # 🧠 LDP Student-Coach Matcher
 
 This web app intelligently matches MBA students with executive coaches using OpenAI embeddings and similarity scoring. It's designed for non-technical users to securely upload inputs, generate matches, and download the results — all in a few clicks.
@@ -103,14 +98,6 @@ This tool is intended for use by the LDP team and should not be shared publicly.
 
 Contact the project admin for issues, support, or feature enhancements.
 
-```
-
----
-
-Let me know if you’d like to:
-
-* Add screenshots or GIFs of the UI
-* Include setup instructions for running locally
 * Make this private with GitHub access controls
 
 I can generate the `requirements.txt` if you don’t already have it.
